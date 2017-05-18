@@ -1,0 +1,12 @@
+<p>
+  entry-form works!
+</p>
+<div>
+Title: <br>
+ <input [(ngModel)]="title">
+ Content: <br>
+ <textarea [(ngModel)]="content"></textarea>
+ <p>
+ <button (click)="save()">Save</button>
+ </div>
+  <a [routerLink]="['']"> Back to list </a>

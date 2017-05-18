@@ -1,0 +1,18 @@
+<p>
+  single-entry works!
+</p>
+<h1> journal details </h1>
+    <a [routerLink]="['']"> Back to list </a>
+
+
+      <div class="journal-info">
+        <h2> {{ journal.title }}&nbsp;</h2>
+
+
+        <h3> {{ journal.content }} </h3>
+        <h3> {{ journal.date }} </h3>
+        <br>
+        <button (click)="deleteJournal()"> Delete </button>
+
+
+      </div>

@@ -17,6 +17,7 @@ router.get('/journal-entries/:id', (req, res, next) => {
 
     return res.json(entry);
   });
+
 });
 
 router.post('/journal-entries', (req, res, next) => {
@@ -31,5 +32,12 @@ router.post('/journal-entries', (req, res, next) => {
                            return res.json(newEntry);
   });
 });
+router.delete('/journal-entries/:id',(req,res,next)=>{
+  Entry.findOneAndRemove({'_id' : req.params.id}, function (err,offer){
+    res.status(200).json({})
+      });
+})
+
+
 
 module.exports = router;
